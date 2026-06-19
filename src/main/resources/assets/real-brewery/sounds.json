@@ -1,0 +1,46 @@
+{
+  "entity.goat.idle": {
+    "sounds": [
+      "real-brewery:goat_idle1",
+      "real-brewery:goat_idle2",
+      "real-brewery:goat_idle3",
+      "real-brewery:goat_idle4",
+      "real-brewery:goat_idle5",
+      "real-brewery:goat_idle6",
+      "real-brewery:goat_idle7",
+      "real-brewery:goat_idle8"
+    ]
+  },
+  "entity.goat.impact": {
+    "sounds": [
+      "real-brewery:goat_impact1",
+      "real-brewery:goat_impact2",
+      "real-brewery:goat_impact3"
+    ]
+  },
+  "entity.goat.jump": {
+    "sounds": [
+      "real-brewery:goat_jump1",
+      "real-brewery:goat_jump2"
+    ]
+  },
+  "entity.goat.pre_ram": {
+    "sounds": [
+      "real-brewery:goat_pre_ram1",
+      "real-brewery:goat_pre_ram2"
+    ]
+  },
+  "entity.goat.scream": {
+    "sounds": [
+      "real-brewery:goat_scream1",
+      "real-brewery:goat_scream2",
+      "real-brewery:goat_scream3",
+      "real-brewery:goat_scream4",
+      "real-brewery:goat_scream5",
+      "real-brewery:goat_scream6",
+      "real-brewery:goat_scream7",
+      "real-brewery:goat_scream8",
+      "real-brewery:goat_scream9"
+    ]
+  }
+}

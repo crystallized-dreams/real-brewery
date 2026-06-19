@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "real-brewery:cheese"
+    }
+  ],
+  "result": {
+    "item": "real-brewery:cheese_block",
+    "count": 1
+  }
+}

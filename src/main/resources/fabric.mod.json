@@ -1,0 +1,32 @@
+{
+	"schemaVersion": 1,
+	"id": "real-brewery",
+	"version": "${version}",
+	"name": "Real Brewery",
+	"description": "Random brews and yes. Cheeseburger.",
+	"authors": [
+		"Alex Alabai"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"accessWidener": "brewery.accesswidener",
+	"license": "CC0-1.0",
+	"icon": "assets/real-brewery/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": ["cheese.burger.brewery.RealBrewery"],
+		"client": ["cheese.burger.brewery.RealBreweryClient"]
+	},
+	"mixins": [
+		"brewery.mixins.json"
+	],
+	"depends": {
+		"fabricloader": "*",
+		"minecraft": "~1.16.5",
+		"java": ">=8",
+		"fabric": "*",
+		"pehkui": "*"
+	}
+}
