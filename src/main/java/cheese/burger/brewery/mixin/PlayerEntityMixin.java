@@ -120,7 +120,7 @@ public abstract class PlayerEntityMixin extends LivingEntity {
         }
         if(!jumping||!grounded||!crouched) return;
         Vec3d lookVec = getRotationVector();
-        double dashStrength = 1.25;
+        double dashStrength = 1.2;
         player.setVelocity(lookVec.x * dashStrength, 0.4, lookVec.z * dashStrength);
         player.getDataTracker().set(ModTrackedData.GOAT_DASH_COOLDOWN, ModTrackedData.GOAT_DASH_COOLDOWN_MAX);
         world.playSound(null, player.getBlockPos(), ModSounds.GOAT_JUMP, SoundCategory.PLAYERS, 1, 1);
