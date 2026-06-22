@@ -1,6 +1,6 @@
 {
   "required": true,
-  "package": "cheese.burger.brewery.mixin",
+  "package": "ru.crystallized_dreams.brewery.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "BlockItemMixin",

@@ -3,21 +3,21 @@
 	"id": "real-brewery",
 	"version": "${version}",
 	"name": "Real Brewery",
-	"description": "Random brews and yes. Cheeseburger.",
+	"description": "Random brewery and new status effects.",
 	"authors": [
 		"Alex Alabai"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/crystallized-dreams/real-brewery"
 	},
 	"accessWidener": "brewery.accesswidener",
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/real-brewery/icon.png",
 	"environment": "*",
 	"entrypoints": {
-		"main": ["cheese.burger.brewery.RealBrewery"],
-		"client": ["cheese.burger.brewery.RealBreweryClient"]
+		"main": ["ru.crystallized_dreams.brewery.RealBrewery"],
+		"client": ["ru.crystallized_dreams.brewery.RealBreweryClient"]
 	},
 	"mixins": [
 		"brewery.mixins.json"
