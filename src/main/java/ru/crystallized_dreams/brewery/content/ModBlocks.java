@@ -1,4 +1,4 @@
-package ru.crystallized_dreams.brewery;
+package ru.crystallized_dreams.brewery.content;
 
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -10,6 +10,7 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
+import ru.crystallized_dreams.brewery.RealBrewery;
 
 public class ModBlocks {
     public static final Block CHEESE_BLOCK=register("cheese_block", new Block(AbstractBlock.Settings.of(Material.SPONGE, MapColor.YELLOW)

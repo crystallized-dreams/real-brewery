@@ -45,30 +45,24 @@ public class PlayerPotionRecipeData {
         String ingredientId = Registry.ITEM.getId(realIngredient.getItem()).toString();
         String key = inputItemId + "|" + potionType + "|" + ingredientId;
 
+        Potion potion;
         if (recipes.containsKey(key)) {
             String potionId = recipes.get(key);
-            Potion potion = Registry.POTION.get(new Identifier(potionId));
-
-            ItemStack result = input.copy();
-            PotionUtil.setPotion(result, potion);
-
-            return result;
+            potion = Registry.POTION.get(new Identifier(potionId));
         } else {
-            Potion potion = getRandomPotion();
+            potion = getRandomPotion();
             if (potion == null) return input;
 
             String potionIdentifier = Registry.POTION.getId(potion).toString();
             recipes.put(key, potionIdentifier);
 
             saveData(world);
-
-            ItemStack result = input.copy();
-            if(heated) result = Items.SPLASH_POTION.getDefaultStack();
-            if(ender) result = Items.LINGERING_POTION.getDefaultStack();
-            PotionUtil.setPotion(result, potion);
-
-            return result;
         }
+        ItemStack result = input.copy();
+        if(heated) result = Items.SPLASH_POTION.getDefaultStack();
+        if(ender) result = Items.LINGERING_POTION.getDefaultStack();
+        PotionUtil.setPotion(result, potion);
+        return result;
     }
 
     private Potion getRandomPotion() {

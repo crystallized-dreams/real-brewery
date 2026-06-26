@@ -19,9 +19,7 @@
 		"main": ["ru.crystallized_dreams.brewery.RealBrewery"],
 		"client": ["ru.crystallized_dreams.brewery.RealBreweryClient"]
 	},
-	"mixins": [
-		"brewery.mixins.json"
-	],
+	"mixins": ["brewery.mixins.json"],
 	"depends": {
 		"fabricloader": "*",
 		"minecraft": "~1.16.5",

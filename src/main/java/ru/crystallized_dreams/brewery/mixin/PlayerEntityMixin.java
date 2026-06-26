@@ -1,6 +1,6 @@
 package ru.crystallized_dreams.brewery.mixin;
 
-import ru.crystallized_dreams.brewery.ModBlocks;
+import ru.crystallized_dreams.brewery.content.ModBlocks;
 import ru.crystallized_dreams.brewery.content.ModEffects;
 import ru.crystallized_dreams.brewery.content.ModSounds;
 import ru.crystallized_dreams.brewery.content.ModTrackedData;

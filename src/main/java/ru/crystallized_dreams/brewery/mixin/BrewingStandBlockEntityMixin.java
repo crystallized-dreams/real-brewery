@@ -22,20 +22,20 @@ public class BrewingStandBlockEntityMixin {
     private void customCraft(CallbackInfo info) {
         ItemStack ingredient = inventory.get(3);
 
+        BrewingStandBlockEntity blockEntity=(BrewingStandBlockEntity)(Object)this;
+        if(blockEntity==null) return;
+        if(blockEntity.getWorld()==null) return;
+        if(blockEntity.getWorld().getServer()==null) return;
+        BlockState below=blockEntity.getWorld().getBlockState(blockEntity.getPos().down());
+        boolean heated=below.isIn(BlockTags.CAMPFIRES);
+        if(!heated) heated=below.isIn(BlockTags.FIRE);
+        if(!heated) heated=below.isOf(Blocks.LAVA);
+        BlockState top=blockEntity.getWorld().getBlockState(blockEntity.getPos().up());
+        boolean ender=top.isOf(Blocks.DRAGON_HEAD);
+
         for (int i = 0; i < 3; i++) {
             ItemStack potionStack=inventory.get(i);
             if(potionStack.isEmpty()) continue;
-
-            BrewingStandBlockEntity blockEntity=(BrewingStandBlockEntity)(Object)this;
-            if(blockEntity==null) return;
-            if(blockEntity.getWorld()==null) return;
-            if(blockEntity.getWorld().getServer()==null) return;
-            BlockState below=blockEntity.getWorld().getBlockState(blockEntity.getPos().down());
-            boolean heated=below.isIn(BlockTags.CAMPFIRES);
-            if(!heated) heated=below.isIn(BlockTags.FIRE);
-            if(!heated) heated=below.isOf(Blocks.LAVA);
-            BlockState top=blockEntity.getWorld().getBlockState(blockEntity.getPos().up());
-            boolean ender=top.isOf(Blocks.DRAGON_HEAD);
 
             inventory.set(i, PlayerPotionRecipeData.INSTANCE
                     .get(potionStack, ingredient, blockEntity.getWorld().getServer().getOverworld(),

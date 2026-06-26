@@ -1,5 +1,6 @@
 package ru.crystallized_dreams.brewery.mixin;
 
+import ru.crystallized_dreams.brewery.content.ModItems;
 import ru.crystallized_dreams.brewery.system.PlayerPotionRecipeData;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -15,7 +16,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public class BrewingRecipeRegistryMixin {
     @Inject(method="isValidIngredient", at=@At("HEAD"), cancellable=true)
     private static void isValidIngredient(ItemStack stack, CallbackInfoReturnable<Boolean> info) {
-        info.setReturnValue(true);
+        if(ModItems.BREW_INGREDIENTS.contains(stack.getItem())) info.setReturnValue(true);
     }
 
     @Inject(method="hasRecipe", at=@At("HEAD"), cancellable=true)
